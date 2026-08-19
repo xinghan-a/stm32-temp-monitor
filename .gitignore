@@ -1,0 +1,17 @@
+# Keil 编译产物
+Objects/
+Listings/
+DebugConfig/
+
+# Keil 用户配置（含账号信息）
+*.uvoptx
+*.uvprojx.user
+Project.uvguix.*
+
+# Windows 临时文件
+Thumbs.db
+*.dbx
+
+# 临时文件
+*.bak
+*.tmp
