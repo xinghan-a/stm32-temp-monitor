@@ -32,6 +32,15 @@ int main(void)
 		OLED_ShowNum(2,9,(int)(Temp*10)%10,1);
 		OLED_ShowString(2,11,"oC");
 		
+		OLED_ShowString(3, 1, "LOW  MID  HIGH");
+		OLED_ShowString(4, 1, "                ");
+        switch(TempLed_GetState())
+        {
+           case 0: OLED_ShowString(4, 1, "==="); break;
+           case 1: OLED_ShowString(4, 6, "==="); break;
+           case 2: OLED_ShowString(4, 11, "===="); break;
+        }
+		
 		Led_TempCtrl(Temp);
 
 		Delay_ms(100);

@@ -33,7 +33,7 @@ void Led_TempCtrl(float Temp)
             if(Temp < HIGH_TO_MID) Led_State = 1;
             break;
     }
-
+	
     // 第二个switch：硬件输出控制
     LED1_OFF();
     LED2_OFF();
@@ -45,3 +45,8 @@ void Led_TempCtrl(float Temp)
         case 2: LED1_ON(); break;
     }
 }
+
+uint8_t TempLed_GetState(void)
+	{
+		return Led_State;
+	}
